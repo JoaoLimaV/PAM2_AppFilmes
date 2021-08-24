@@ -1,0 +1,7 @@
+{
+  "name": "PAM2AppFilmes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
