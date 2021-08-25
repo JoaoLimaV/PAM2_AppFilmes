@@ -1,0 +1,22 @@
+ion-item{
+  --padding-start: 10px;  //margem esquerda
+  --inner-padding-end: 10px; //margem direita
+     ion-thumbnail{
+          height: 100%;
+          margin-inline-end: 8px;//margem esquerda da imagem
+    }
+    h1{
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    p{
+      font-size: 0.7rem;
+    }
+    p + p{
+      color: #8a8a8a;
+    }
+    ion-chip{
+      --padding-inline: 3px ; //deixa o ion-chip com aperência arredondada
+      border-radius: 100%;
+    }
+  }
