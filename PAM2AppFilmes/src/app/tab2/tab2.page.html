@@ -8,6 +8,8 @@
 
 <ion-content [fullscreen]="true">
 
+    <ion-title> {{  titulo }}  </ion-title>
+
     <ion-searchbar placeholder="Pesquisar">  </ion-searchbar>
     <ion-item-sliding>
 
@@ -32,10 +34,9 @@
 
         <ion-item-options (click)="exibirAlertaFavorito()" side = "end">
           <ion-item-option color = "laranja">
-            <ion-icon slot="icon-only" name="star">
-          </ion-icon>
-      </ion-item-option>
-    </ion-item-options> 
+            <ion-icon slot="icon-only" name="star"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
 
       </ion-list>
       </ion-item-sliding>
