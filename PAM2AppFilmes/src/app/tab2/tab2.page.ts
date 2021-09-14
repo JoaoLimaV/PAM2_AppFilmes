@@ -19,7 +19,8 @@ export class Tab2Page {
         duracao: '52m',
         classificacao: '81',
         cartaz: '../assets/img/loki.jpg',
-        generos: ['Drama', 'Sci-Fi', 'Fantasy']
+        generos: ['Drama', 'Sci-Fi', 'Fantasy'],
+        pagina: '/loki'
 
     },
     {
@@ -28,7 +29,8 @@ export class Tab2Page {
         duracao: '45m',
         classificacao: '89',
         cartaz: '../assets/img/invencivel.jpg',
-        generos: ['Sci-Fi & Fantasy', 'Animação', 'Action & Adventure', 'Drama']
+        generos: ['Sci-Fi & Fantasy', 'Animação', 'Action & Adventure', 'Drama'],
+        pagina: '/invencivel'
     },
     {
       nome: 'The Good Doctor: O Bom Doutor (2017)',
@@ -36,7 +38,8 @@ export class Tab2Page {
         duracao: '43m',
         classificacao: '86',
         cartaz: '../assets/img/doctor.jpg',
-        generos: ['Drama']
+        generos: ['Drama'],
+        pagina: '/the-good-doctor-o-bom-doutor'
     }
 
   ];

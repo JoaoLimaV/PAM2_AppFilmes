@@ -8,12 +8,12 @@
 
 <ion-content [fullscreen]="true">
 
-    <ion-title> {{ titulo }}  </ion-title>
+  <ion-title> {{ titulo }}  </ion-title>
 
     <ion-searchbar placeholder="Pesquisar">  </ion-searchbar>
 
      <ion-item-sliding *ngFor="let filme of listaFilmes">
-          <ion-list lines="full">
+           <ion-list lines="full" [routerLink] = "filme.pagina">
             <ion-item>
               <ion-thumbnail slot  ="start">
                 <img [src]="filme.cartaz">
@@ -38,6 +38,7 @@
         </ion-item-options>
         </ion-list>
   </ion-item-sliding>
+
 
 
 </ion-content>
