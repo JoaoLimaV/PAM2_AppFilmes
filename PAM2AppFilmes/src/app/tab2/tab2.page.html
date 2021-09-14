@@ -8,101 +8,36 @@
 
 <ion-content [fullscreen]="true">
 
-    <ion-title> {{  titulo }}  </ion-title>
+    <ion-title> {{ titulo }}  </ion-title>
 
     <ion-searchbar placeholder="Pesquisar">  </ion-searchbar>
-    <ion-item-sliding>
 
-    <ion-list lines="full">
-    <ion-item>
-    <ion-thumbnail slot="start">
-    <img  src ="../assets/img/loki.jpg">
-    </ion-thumbnail>
-
-    <ion-label class="ion-text-wrap">
-      <div>
-      <h1>Loki (2021)</h1>
-      <p>08/06/2021(BR)-52m</p>
-      <p>Drama, Sci-Fi & Fantasy<p>
-      </div>
-    </ion-label>
-
-    <ion-chip color="success" outline>
-    <ion-label>81%</ion-label>
-    </ion-chip>
-    </ion-item>
-
-        <ion-item-options (click)="exibirAlertaFavorito()" side = "end">
-          <ion-item-option color = "laranja">
+     <ion-item-sliding *ngFor="let filme of listaFilmes">
+          <ion-list lines="full">
+            <ion-item>
+              <ion-thumbnail slot  ="start">
+                <img [src]="filme.cartaz">
+              </ion-thumbnail>
+            <ion-label class="ion-text-wrap">
+          <div>
+              <h1>{{  filme.nome }}</h1>
+              <p>{{filme.lancamento}} - {{filme.duracao}}</p>
+              <ion-badge color="light" *ngFor="let    genero of filme.generos">
+                      {{genero}}
+              </ion-badge>
+          </div>
+            </ion-label>
+            <ion-chip color="success" outline>
+              <ion-label>{{filme.classificacao}}%</ion-label>
+            </ion-chip>
+        </ion-item>
+            <ion-item-options (click)="exibirAlertaFavorito()" side="end">
+            <ion-item-option color="laranja">
             <ion-icon slot="icon-only" name="star"></ion-icon>
-          </ion-item-option>
+        </ion-item-option>
         </ion-item-options>
-
-      </ion-list>
-      </ion-item-sliding>
-
-      <!-- DIVISÃO DAS SÉRIES-->
-
-      <ion-item-sliding>
-      <ion-list lines="full">
-        <ion-item>
-        <ion-thumbnail slot="start">
-        <img  src ="../assets/img/invencivel.jpg">
-        </ion-thumbnail>
-
-        <ion-label class="ion-text-wrap">
-          <div>
-          <h1>Invencível(2021)</h1>
-          <p>26/03/2021(BR)-45m</p>
-          <p>Sci-Fi & Fantasy, Animação, Action & Adventure, Drama<p>
-          </div>
-        </ion-label>
-
-        <ion-chip color="success" outline>
-        <ion-label>89%</ion-label>
-        </ion-chip>
-        </ion-item>
-
-            <ion-item-options (click)="exibirAlertaFavorito()" side = "end">
-              <ion-item-option color = "laranja">
-                <ion-icon slot="icon-only" name="star">
-              </ion-icon>
-          </ion-item-option>
-        </ion-item-options>
-
-          </ion-list>
-        </ion-item-sliding>
-
-          <!-- DIVISÃO DAS SÉRIES-->
-
-      <ion-item-sliding>
-      <ion-list lines="full">
-        <ion-item>
-        <ion-thumbnail slot="start">
-        <img  src ="../assets/img/doctor.jpg">
-        </ion-thumbnail>
-
-        <ion-label class="ion-text-wrap">
-          <div>
-          <h1>The Good Doctor: O Bom Doutor (2017)</h1>
-          <p>02/09/2020(BR)-43m</p>
-          <p>Drama<p>
-          </div>
-        </ion-label>
-
-        <ion-chip color="success" outline>
-        <ion-label>86%</ion-label>
-        </ion-chip>
-        </ion-item>
-
-                <ion-item-options (click)="exibirAlertaFavorito()" side = "end">
-                  <ion-item-option color = "laranja">
-                    <ion-icon slot="icon-only" name="star">
-                  </ion-icon>
-              </ion-item-option>
-            </ion-item-options>
+        </ion-list>
+  </ion-item-sliding>
 
 
-          </ion-list>
-        </ion-item-sliding>
 </ion-content>
